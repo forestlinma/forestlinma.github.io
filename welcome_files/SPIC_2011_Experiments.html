@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>SPIC 2011 experimental results</title>
+<style type="text/css">
+<!--
+.STYLE1 {font-family: Verdana, Geneva, Arial, Helvetica, sans-serif}
+.STYLE2 {font-size: 12px}
+.STYLE3 {font-size: 10px}
+body,td,th {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+-->
+</style>
+</head>
+
+<body>
+<div class="WordSection1 STYLE1 STYLE1">
+  <h1 align="center" style="margin-right:48.0pt;text-indent:.5in"><span style="font-size:16pt">Adaptive Block-Size Transform Based Just-Noticeable Difference Model for Images/Videos
+    <o:p></o:p>
+  </span></h1>
+  <p align="center" class="STYLE2" style="margin-right:24.0pt;text-indent:.5in"><a href="http://www.ee.cuhk.edu.hk/~lma/">Lin Ma</a> and  <a href="http://www.ee.cuhk.edu.hk/~knngan/">King Ngi Ngan</a> </p>
+  <p align="center" class="STYLE2" style="margin-right:24.0pt; text-indent:.5in; margin-bottom: 0in;">Dept. of<a href="http://www.ee.cuhk.edu.hk/"> Electronic Enginnering</a>, <a href="http://www.cuhk.edu.hk/english/">The Chinese University of Hong Kong</a><span class="STYLE2"><o:p>&nbsp;</o:p>
+  </span></p>
+  <h3 class="MsoNormal"><strong>Abstract:</strong><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></h3>
+  <div align="justify" class="STYLE2">In this paper, we propose a novel Adaptive Block-size Transform (ABT) based Just-Noticeable Difference (JND) model for images/videos. Extension from 8×8 Discrete Cosine Transform (DCT) based JND model to 16×16 DCT based JND is firstly performed by considering both the spatial and temporal Human Visual System (HVS) properties. For still images or INTRA video frames, a new spatial selection strategy based on the Spatial Content Similarity (SCS) between a macroblock and its sub-blocks is proposed to determine which transform size is employed to generate the JND map. For the INTER video frames, a temporal selection strategy based on the Motion Characteristic Similarity (MCS) between a macroblock and its sub-blocks is presented to decide which transform size for the JND. Compared with other JND models, our proposed scheme can tolerate more distortions while preserving better perceptual quality. In order to demonstrate the efficiency of the ABT-based JND in modeling the HVS properties, a simple visual quality metric is designed by considering the ABT-based JND masking properties. Evaluating on the image and video subjective databases, the proposed metric delivers a performance comparable to the state-of-the-art metrics. It confirms that the ABT-based JND consists well with the HVS. Also the proposed quality metric is applied on ABT-based H.264/Advanced Video Coding (AVC) for the perceptual video coding. The experimental results demonstrate that the proposed method can deliver video sequences with higher visual quality at the same bit-rates.</div>
+  <div class="MsoNormal" align="center" style="text-align:center">
+    <hr size="2" width="100%" align="center">
+  </div>
+  <h3 class="MsoNormal"><strong>ABT-based JND Evaluation:</strong></h3>
+  <p align="center" class="MsoNormal"><img src="SPIC_JND_Image_Evaluation/Bridge_syn.png" width="1034" height="512"></p>
+  <div align="center" class="STYLE2">Left: Noise-inserted image by ABT-based JND (28.53dB); Right: Original Image</div>
+  <p align="center" class="MsoNormal"><img src="SPIC_JND_Image_Evaluation/peppers_syn.png" width="1034" height="512"></p>
+  <div align="center" class="STYLE2">Left: Noise-inserted image by ABT-based JND (29.66dB); Right: Original Image</div>
+  <p align="center" class="MsoNormal"><img src="SPIC_JND_Image_Evaluation/Lena_syn.png" alt="" width="1034" height="512"></p>
+  <div align="center" class="STYLE2">Left: Noise-inserted image by ABT-based JND (29.51dB); Right: Original Image</div>
+  <p align="center" class="MsoNormal"><img src="SPIC_JND_Image_Evaluation/barbara_syn.png" width="1034" height="512"></p>
+  <div align="center" class="STYLE2">Left: Noise-inserted image by ABT-based JND (29.02dB); Right: Original Image</div>
+  <p align="center" class="MsoNormal"><img src="SPIC_JND_Image_Evaluation/kodim13_ABT_test.png" width="1546" height="512"></p>
+  <div align="center" class="STYLE2">Left: Noise-inserted image by ABT-based JND (28.42dB); Right: Original Image</div>
+  <p align="center" class="MsoNormal"><img src="SPIC_JND_Image_Evaluation/kodim14_ABT_test.png" width="1546" height="512"></p>
+  <div align="center" class="STYLE2">Left: Noise-inserted image by ABT-based JND (29.14dB); Right: Original Image</div>
+  <p align="center" class="MsoNormal" style="margin-bottom: 0in">&nbsp;</p>
+  <div class="MsoNormal" align="center" style="text-align:center">
+    <hr size="2" width="100%" align="center">
+    <h3 align="left" style="margin-bottom: 0in">Visual Quality Metric Performances for Images:</h3>
+    <p align="justify" class="STYLE2" style="margin-bottom: 0in">The scatter-plots of different image quality metrics are illustrated in the following. Each spot represents a distorted image. The horizontal axis is the quality index obtained from the objective quality metric, such as PSNR, VIF, and SSIM. The vertical axis is the subjective evaluation score (DMOS for LIVE, MOS for IRCCyN/IVC, and Perception Distortion for A57). The left are the scatter-plots before non-linear mapping, while the right are the ones after mapping. The more closely the spots scatter around the fitted line, the better performance of the quality metric.<br>
+        <br>
+      Detailed information of the image subjective databases could be referred to:<br>
+  <br>
+  <strong>LIVE</strong> image subjective database: <a href="http://live.ece.utexas.edu/research/quality/">http://live.ece.utexas.edu/research/quality/</a>.<br>
+  <strong>IRRCyN/IVC</strong> image subjective database: <a href="http://www2.irccyn.ec-nantes.fr/ivcdb/">http://www2.irccyn.ec-nantes.fr/ivcdb/</a>.<strong><br>
+    A57</strong> image subjective database: <a href="http://foulard.ece.cornell.edu/dmc27/vsnr/vsnr.html">http://foulard.ece.cornell.edu/dmc27/vsnr/vsnr.html</a>.</p>
+    <h3 align="left" style="margin-bottom: 0in"><u><span style="font-size:12.0pt">LIVE Image Database</span></u></h3>
+    <p align="center" style="margin-bottom: 0in"><img src="SPIC_JND_Image_Evaluation/IQM/LIVE_Proposed.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/IQM/LIVE_Proposed_Mapped.png" width="400" height="400"></p>
+    <div align="center" class="STYLE2">The Proposed Method </div>
+    <p align="center" style="margin-bottom: 0in"><img src="SPIC_JND_Image_Evaluation/IQM/LIVE_PSNR_before_mapping.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/IQM/LIVE_PSNR_after_mapping.png" width="400" height="400"></p>
+    <div align="center" class="STYLE2">PSNR</div>
+    <p><img src="SPIC_JND_Image_Evaluation/IQM/LIVE_SSIM_before_mapping.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/IQM/LIVE_SSIM_after_mapping.png" width="400" height="400"></p>
+    <div align="center" class="STYLE2">SSIM</div>
+    <p><img src="SPIC_JND_Image_Evaluation/IQM/LIVE_VIF_before_mapping.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/IQM/LIVE_VIF_after_mapping.png" width="400" height="400"></p>
+    <div align="center" class="STYLE2">VIF</div>
+    <h3 align="left"><u><span style="font-size:12.0pt">IRCCyN/IVC Image Database</span></u></h3>
+    <h3 align="center"><u><span style="font-size:12.0pt"><img src="SPIC_JND_Image_Evaluation/IQM/IRCCyN_Proposed.png" width="400" height="400">
+      <o:p></o:p>
+        </span></u><img src="SPIC_JND_Image_Evaluation/IQM/IRCCyN_Proposed_Mapped.png" width="400" height="400"></h3>
+    <div align="center" class="STYLE2">The Proposed Method </div>
+    <p align="center"><img src="SPIC_JND_Image_Evaluation/IQM/IVC_PSNR_before_mapping.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/IQM/IVC_PSNR_after_mapping.png" width="400" height="400"></p>
+    <div align="center" class="STYLE2">PSNR</div>
+    <p align="center"><img src="SPIC_JND_Image_Evaluation/IQM/IVC_SSIM_before_mapping.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/IQM/IVC_SSIM_after_mapping.png" width="400" height="400"></p>
+    <div align="center" class="STYLE2">SSIM</div>
+    <p align="center"><img src="SPIC_JND_Image_Evaluation/IQM/IVC_VIF_before_mapping.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/IQM/IVC_VIF_after_mapping.png" width="400" height="400"></p>
+    <div align="center" class="STYLE2">VIF</div>
+    <p><img src="SPIC_JND_Image_Evaluation/IQM/IVC_VSNR_before_mapping.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/IQM/IVC_VSNR_after_mapping.png" width="400" height="400">    </p>
+    <div align="center" class="STYLE2">VSNR</div>
+    <h3 align="left"><u><span style="font-size:12.0pt">A57 Image Database</span></u></h3>
+    <p><img src="SPIC_JND_Image_Evaluation/IQM/A57_Proposed.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/IQM/A57_Proposed_Mapped.png" width="400" height="400"></p>
+    <div align="center" class="STYLE2">The Proposed Method </div>
+    <p align="center"><img src="SPIC_JND_Image_Evaluation/IQM/A57_PSNR_before_mapping.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/IQM/A57_PSNR_after_mapping.png" width="400" height="400"></p>
+    <div align="center" class="STYLE2">PSNR</div>
+    <p align="center"><img src="SPIC_JND_Image_Evaluation/IQM/A57_SSIM_before_mapping.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/IQM/A57_SSIM_after_mapping.png" width="400" height="400"></p>
+    <div align="center" class="STYLE2">SSIM</div>
+    <p align="center"><img src="SPIC_JND_Image_Evaluation/IQM/A57_VIF_before_mapping.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/IQM/A57_VIF_after_mapping.png" width="400" height="400"></p>
+    <div align="center" class="STYLE2">VIF</div>
+    <p align="center"><img src="SPIC_JND_Image_Evaluation/IQM/A57_VSNR_before_mapping.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/IQM/A57_VSNR_after_mapping.png" width="400" height="400"></p>
+    <div align="center" class="STYLE2">VSNR</div>
+    <p align="center">&nbsp;</p>
+    <div class="MsoNormal" align="center" style="text-align:center">
+      <hr size="2" width="100%" align="center">
+    </div>
+    <p align="center">&nbsp;</p>
+  </div>
+  <h3 style="margin-bottom: 0in">Visual Quality Metric Performances for Videos:</h3>
+  <p class="STYLE2" style="margin-bottom: 0in">The scatter-plots of different video quality metrics are illustrated in the following. Each spot represents a distorted video sequence. The horizontal axis is the quality index obtained from the objective quality metric. The vertical axis is the subjective evaluation score (DMOS). The left are the scatter-plots before non-linear mapping, while the right are the ones after mapping. The more closely the spots scatter around the fitted line, the better performance the quality metric.<br>
+    <br>
+    Detailed information of the video subjective database could be referred to:<br>
+    <br>
+    <strong>LIVE video subjective database</strong>: <a href="http://live.ece.utexas.edu/research/quality/">http://live.ece.utexas.edu/research/quality/</a>.</p>
+  <h3 style="margin-bottom: 0in"><u><span style="font-size:12.0pt">LIVE Video Database </span></u></h3>
+  <p align="center" class="STYLE2" style="margin-bottom: 0in"><img src="SPIC_JND_Image_Evaluation/VQM/LIVE_video.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/VQM/LIVE_video_mapped.png" width="400" height="400"></p>
+  <div align="center" class="STYLE2">The Proposed Method</div>
+  <p align="center" class="STYLE2" style="margin-bottom: 0in"><img src="SPIC_JND_Image_Evaluation/VQM/cvqm_before.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/VQM/cvqm_after.png" width="400" height="400"></p>
+  <div align="center" class="STYLE2">VQM</div>
+  <p align="center" class="STYLE2" style="margin-bottom: 0in"><img src="SPIC_JND_Image_Evaluation/VQM/VMSSIM_before.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/VQM/VMSSIM_after.png" width="400" height="400"></p>
+  <div align="center" class="STYLE2">MSSIM</div>
+  <p align="center" class="STYLE2" style="margin-bottom: 0in"><img src="SPIC_JND_Image_Evaluation/VQM/VPSNR_before.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/VQM/VPSNR_after.png" width="400" height="400"></p>
+  <div align="center" class="STYLE2">PSNR</div>
+  <p align="center" class="STYLE2" style="margin-bottom: 0in"><img src="SPIC_JND_Image_Evaluation/VQM/VSSIM_before.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/VQM/VSSIM_after.png" width="400" height="400"></p>
+  <div align="center" class="STYLE2">SSIM</div>
+  <p align="center" class="STYLE2" style="margin-bottom: 0in"><img src="SPIC_JND_Image_Evaluation/VQM/VVIF_before.png" width="400" height="400"><img src="SPIC_JND_Image_Evaluation/VQM/VVIF_after.png" width="400" height="400"></p>
+  <div align="center" class="STYLE2">VIF</div>
+  <p align="center" class="STYLE2" style="margin-bottom: 0in">&nbsp;</p>
+  <div class="MsoNormal" align="center" style="text-align:center">
+    <hr size="2" width="100%" align="center">
+    <span class="i_td_windows_footer STYLE3">Last Update: Feb. 2011. Lin Ma all rights reserved.</span></div>
+</div>
+</body>
+</html>

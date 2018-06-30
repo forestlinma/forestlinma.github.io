@@ -1,0 +1,265 @@
+
+<!-- saved from url=(0114)http://conviqa.noahlab.com.hk/project.html?plg_nld=1&plg_uin=1&plg_auth=1&plg_nld=1&plg_usr=1&plg_vkey=1&plg_dev=1 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<link rel="shortcut icon" href="http://www.ee.cuhk.edu.hk/~lma/welcome_files/lma.ico">
+<title>Project Page of StereoImageQA</title>
+
+<style type="text/css">
+BODY {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 100% "Times New Roman", Times, serif; BACKGROUND: #ffffff; COLOR: #000; PADDING-TOP: 0px
+}
+.oneColFixCtr #container {
+	BORDER-BOTTOM: #000000 1px ;
+	TEXT-ALIGN: left;
+	BORDER-LEFT: #000000 1px ;
+	MARGIN: 0px auto;
+	WIDTH: 1000px;
+	BACKGROUND: #ffffff;
+	BORDER-TOP: #000000 1px ;
+	BORDER-RIGHT: #000000 1px 
+}
+.oneColFixCtr #mainContent {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; PADDING-TOP: 0px
+}
+.style3 {
+	FONT-SIZE: small
+}
+.style5 {
+	FONT-SIZE: large; FONT-WEIGHT: bold
+}
+.style6 {
+	FONT-SIZE: large
+}
+.style7 {
+	TEXT-DECORATION: none
+}
+.style8 {
+	COLOR: #000000
+}
+.style9 {
+	COLOR: #000080
+}
+.style10 {
+	MARGIN-TOP: 5pt; MARGIN-BOTTOM: 5pt; FONT-SIZE: medium
+}
+.style11 {
+	MARGIN-TOP: 5pt; TEXT-INDENT: 15px; MARGIN-BOTTOM: 5pt; FONT-SIZE: medium
+}
+.style12 {
+	MARGIN-LEFT: 12pt; FONT-SIZE: medium; MARGIN-RIGHT: 12pt}
+.code {
+	FONT-FAMILY: "Courier New", Courier, monospace; FONT-SIZE: 15px
+}
+.codeline {
+	MARGIN-TOP: 5pt; TEXT-INDENT: 15px; FONT-FAMILY: "Courier New", Courier, monospace; MARGIN-BOTTOM: 5pt; FONT-SIZE: 15px
+}
+.DivCode {
+	BORDER-BOTTOM: #333 1px dashed; BORDER-LEFT: #333 1px dashed; WIDTH: 800px; BACKGROUND: #ffd; MARGIN-LEFT: 10pt; FONT-SIZE: medium; BORDER-TOP: #333 1px dashed; BORDER-RIGHT: #333 1px dashed
+}
+.auto-style5 {
+	MARGIN-TOP: 3pt; MARGIN-BOTTOM: 3pt; FONT-SIZE: 100%
+}
+#motion_channel {
+  padding-right: 0px;
+  padding-left: 20px;
+  float: right;
+  padding-bottom: 20px;
+  padding-top: 0px;
+}
+</style>
+
+<meta name="GENERATOR" content="MSHTML 8.00.7601.17744"></head>
+<body class="oneColFixCtr">
+<div id="pub_slot_Sun Mar 27 2016">
+<div style="visibility: hidden; opacity: 0;"><div></div></div><div id="container">
+<div style="MARGIN-BOTTOM: 0pt" id="mainContent">
+  <h1 style="MARGIN-TOP: 20pt" align="center"><a style="COLOR: #000; TEXT-DECORATION: none">Learning Structure of Stereoscopic Image for No-Reference Quality Assessment with Convolutional Neural Network </a></h1>
+  <p style="MARGIN-TOP: 20pt" class="style6" align="center"><span class="style8"><a href="http://www.vsislab.com/">Wei Zhang</a><sup>1</sup>,</span> <span style="MARGIN-TOP: 20pt">Chenfei Qu</a><sup>1</sup>,</span> </span> <span style="MARGIN-TOP: 20pt"><a href="http://www.ee.cuhk.edu.hk/~lma/">Lin Ma</a><sup>2</sup>,</span> </span> <span style="MARGIN-TOP: 20pt">Jingwei Guan</a><sup>3</sup>,</span> and <span style="MARGIN-TOP: 20pt">Rui Huang</a><sup>4</sup></span></p>
+
+  <p style="MARGIN-TOP: 5pt; margin-bottom: 5pt;" class="style12" align="center"><sup>1</sup>School of Control Science and Engineering, Shandong University</p>
+  <p style="MARGIN-TOP: 5pt; margin-bottom: 5pt;" class="style12" align="center"><sup>2</sup>Huawei Noah's Ark Lab,  Hong Kong</p>
+  <p style="MARGIN-TOP: 5pt; margin-bottom: 5pt;" class="style12" align="center"><sup>3</sup>Department of Electronic Engineering, The Chinese University of Hong Kong</p>
+  <p style="MARGIN-TOP: 5pt; margin-bottom: 5pt;" class="style12" align="center"><sup>4</sup>NEC Laboratories China</p>
+  <p style="MARGIN-TOP: 5pt; margin-bottom: 5pt;" class="style6" align="center">[<a href="lma_PR_2016.pdf">PDF</a>]</p>
+<!--   <p style="MARGIN-TOP: 5pt; margin-bottom: 5pt;" class="style6" align="center"><img src="./Project Page of ConvIQA_files/iqa_demo_old_01.png" width="960" height="246"></p> -->
+
+</div>
+
+
+
+
+<div class="style12">
+  <h2>Abstract  </h2>
+  <p align="justify">In this paper, we propose to learn the structures of stereoscopic images based on convolutional neural network (CNN) for no-reference quality assessment. Taking image patches from the stereoscopic images as inputs, the proposed CNN can learn the local structures which are sensitive to human perception and representative for perceptual quality evaluation. By stacking multiple convolution and max-pooling layers together, the learned structures in lower convolution layers can be composed and convolved to higher levels to form a fixed-length representation. Multilayer perceptron (MLP) is further employed to summarize the learned representation to a final value to indicate the perceptual quality of the stereo image patch pair. With different inputs, two different CNNs are designed, namely one-column CNN with only the image patch from the difference image as input, and three-column CNN with the image patches from left-view image, right-view image, and difference image as the input. The CNN parameters for stereoscopic images are learned and transferred based on the large number of 2D natural images. With the evaluation on public LIVE phase-I, phase-II, and IVC stereoscopic image databases, the proposed no-reference metric achieves the state-of-the-art performance for quality assessment of stereoscopic images, and is even competitive to existing full-reference quality metrics.</p>
+
+  <p align="left">The contributions of this work: </p>
+  <ul>
+    <div align="justify">
+      <!-- <li>Build a robust group detector.</li>
+    <li>Design scene-independent group descriptors.</li>
+    <li>Crowd scene understanding via group states analysis.</li>
+    <li>Crowd video classification.</li>
+    <li>Crowd profiling dataset.</li> -->
+    </div>
+	<li> 
+      <div align="justify"><strong>CNNs are employed to learn the local structures for stereoscopic image quality assessment</strong>. The proposed CNN couples the feature extraction and learning process together to produce the perceptual quality from the image pixel.</div>
+    </li>
+    <li> 
+      <div align="justify"><strong>Two CNNs are designed to learn the image local structures based on different inputs</strong>. Difference image are introduced to CNN to assess the image quality. Experimental results on public stereoscopic image datasets show that our proposed CNN model surpasses the state-of-the-art.</div>
+    </li>
+    <li>  
+      <div align="justify"><strong>CNN parameters are pretrained on 2D images and transferred to stereoscopic images</strong>, which solves the problem of the lacking of stereoscopic image, and improves the corresponding performances.</div>
+    </li>
+    </ul>
+  <div align="center"></div>
+<div></div>
+</div>
+
+
+
+<div class="style12">
+<!-- <p style="MARGIN-TOP: 5pt; margin-bottom: 5pt;" class="style3" align="center">&nbsp;</p> -->
+<div></div>
+</div>
+
+
+<div class="style12">
+<h2>Convolutional Neural Network for Stereoscopic Image Quality Assessment</h2>
+<p>The stereoscopic images differ from the 2D natural images, as the left and right views together can provide depth perception. Therefore, perceptual evaluation of the stereoscopic image needs to consider the information from both the left and right views. It is demonstrated that the difference image between the left view and right view is more important than the left and right views for quality assessment.</p>
+<p align="center"><img src="StereoImageQA/difference.png" width="957" height="206"></p>
+<img src="StereoImageQA/threecolumn.png" name="motion_channel" width="607" height="324" id="motion_channel">
+<p align="justify"><strong>Proposed three-column CNN:</strong> </p>
+
+<p align="justify">The three-column CNN consists three one-column CNNs, which takes full consideration of not only left view and right view in stereoscopic images, but also the difference image obtaining from the stereoscopic image. The difference image implicitly contains the disparity and depth information, which is proved to be very important for the stereoscopic image quality perception. </p>
+<p align="justify">Each column in the three-column CNN has two layers of convolution and max-pooling. The three identical CNNs are used to learn the structures from the left view, right view, and difference image, respectively. With two layers of convolution and max-pooling processes, three different image patches are represented as three different vectors, which are expected to contain the structures of stereoscopic images from different viewpoints. These three vectors are concatenated together and fed into the upper multilayer perceptron (MLP) to generate the quality score.</p>
+<div></div>
+</div>
+
+
+
+
+
+<div class="style12">
+<h2>Experimental Results </h2>
+<p>
+  <!-- <p align="center"><iframe width="640" height="450" src="./WWWcrowd_files/MZycSB4BALY.html" frameborder="0" allowfullscreen=""> -->
+  <strong>SROCC of IQA metrics on </strong> <strong>LIVE  phase-I dataset </strong></p>
+<p align="center"><img src="StereoImageQA/phase1.png" width="670" height="512"></p>
+<p><strong>SROCC of IQA metrics </strong>on <strong>LIVE  phase-II</strong> <strong>dataset (with symmetric distortion)</strong></p>
+<p align="center"><img src="StereoImageQA/phase2_symmetric.png" width="603" height="305"></p>
+<p align="justify"><strong>SROCC of IQA metrics </strong>on <strong>LIVE  phase-II</strong> <strong>dataset (with asymmetric distortion)</strong></p>
+<p align="center"><img src="StereoImageQA/phase2_asymmetric.png" width="602" height="293"></p>
+<p align="justify"><strong>LCC and SROCC of IQA metrics on IVC dataset</strong></p>
+<p align="center"><img src="StereoImageQA/ivc.png" width="415" height="367"></p>
+<div></div>
+</div>
+
+
+
+<div class="style12">
+<h2>Reference </h2>
+<blockquote>
+ <table width="967" border="0">
+    <tbody>
+	<tr>
+      <td width="175"><strong>Benoit et al. </strong></td>
+      <td><div align="justify">A. Benoit, P. Le Callet, P. Campisi, and R. Cousseau, "Quality assessment of stereoscopic images", EURASIP Journal on Image and Video Processing, 2009. [<a href="http://download.springer.com/static/pdf/102/art%253A10.1155%252F2008%252F659024.pdf?originUrl=http%3A%2F%2Fjivp.eurasipjournals.springeropen.com%2Farticle%2F10.1155%2F2008%2F659024&token2=exp=1459915503~acl=%2Fstatic%2Fpdf%2F102%2Fart%25253A10.1155%25252F2008%25252F659024.pdf*~hmac=7c9fe1f0f2a90101cdf2ed69895d3a331d1b4d7f30ebc427c56e71cbf5bab791">Full Text</a>] </div></td>
+    </tr>
+	<tr>
+      <td width="175"><strong>You et al. </strong></td>
+      <td><div align="justify">J. You, L. Xing, A. Perkis, and X. Wang, "Perceptual quality assessment for stereoscopic images based on 2D image quality metrics and disparity analysis", International Workshop on Video Processing and Quality Metrics for Consumer Electronics, 2010. [<a href="http://events.engineering.asu.edu/vpqm/vpqm10/Proceedings_VPQM2010/vpqm_p09.pdf">Full Text</a>] </div></td>
+    </tr>
+	<tr>
+      <td width="175"><strong>Gorley and Holliman. </strong></td>
+      <td><div align="justify">P. Gorley and N. Holliman, "Stereoscopic image quality metrics and compression", Proc. SPIE, 2008. [<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.157.843&rep=rep1&type=pdf">Full Text</a>] </div></td>
+    </tr>
+	<tr>
+      <td width="175"><strong>MS-SSIM </strong></td>
+      <td><div align="justify">M. J. Chen, D. K. Su, C. C. Kwon, L. K. Cormack, and A. C. Bovik, "Full-reference quality assessment of stereopairs accounting for rivalry", Proc. Asilomar Conference on Signals, Systems and Computers, 2012. [<a href="http://live.ece.utexas.edu/publications/2012/Ming_Asilomar3DQA.pdf">Full Text</a>] </div></td>
+    </tr>
+	<tr>
+      <td width="175"><strong>Hewage and Martini </strong></td>
+      <td><div align="justify">C. Hewage, S. T. Worrall, S. Dogan, and A. M. Kondoz, "Prediction of stereoscopic video quality using objective quality models of 2-D video", Electronics Letters, 2008. [<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4586195">Full Text</a>] </div></td>
+    </tr>
+	<tr>
+      <td width="175"><strong>Wang et al. </strong></td>
+      <td><div align="justify">Z. Wang, E. P. Simoncelli, and A. C. Bovik, "Multiscale structural similarity for image quality assessment", Proc. Asilomar Conference on Signals, Systems, and Computers, 2003. [<a href="https://ece.uwaterloo.ca/~z70wang/publications/msssim.pdf">Full Text</a>] </div></td>
+    </tr>
+	<tr>
+      <td width="175"><strong>Ma et al. </strong></td>
+      <td><div align="justify">L. Ma, X. Wang, Q. Liu, and K. N. Ngan, "Reorganized DCT-based image representation for reduced reference stereoscopic image quality assessment", Neurocomputing, 2016. [accept]  </div></td>
+    </tr>
+	<tr>
+      <td width="175"><strong>Akhter et al. </strong></td>
+      <td><div align="justify">R. Akhter, J. Baltes, Z. M. Parvez Sazzad, and Y. Horita, "No reference stereoscopic image quality assessment", Proc. SPIE,  2010. [<a href="http://spie.org/Publications/Proceedings/Paper/10.1117/12.838775">Full Text</a>] </div></td>
+    </tr>
+	<tr>
+      <td width="175"><strong>Shao et al. </strong></td>
+      <td><div align="justify">F. Shao, W. Lin, S. Wang, G. Jiang, and M. Yu, "Blind image quality assessment for stereoscopic images using binocular guided quality lookup and visual codebook", IEEE Transactions on Broadcasting, 2015. [<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7056476">Full Text</a>] </div></td>
+    </tr>
+	<tr>
+      <td width="175"><strong>Ryu and Sohn </strong></td>
+      <td><div align="justify">S. Ryu, D. H. Kim, and K. Sohn, "Stereoscopic image quality metric based on binocular perception model", ICIP, 2012. [<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6466933">Full Text</a>] </div></td>
+    </tr>
+    <tr>
+      <td><strong>Chen et al.</strong></td>
+      <td><div align="justify">M. J. Chen, L. K. Cormack, A. C. Bovik, "No-reference quality assessment of natural stereopairs", TIP, 2013.  [<a href="http://live.ece.utexas.edu/publications/2013/Ming%203D%20NR%20IQA%20paper.pdf">Full Text</a>] </div></td>
+    </tr>
+	<tr>
+      <td width="175"><strong>SSIM </strong></td>
+      <td><div align="justify">Z. Wang, A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli, "Image quality assessment: From error visibility to structural similarity", TIP, 2004. [<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1284395">Full Text</a>] </div></td>
+    </tr>
+    <tr>
+      <td><strong>FSIM</strong></td>
+      <td><div align="justify">L. Zhang, D. Zhang, X. Mou, and D. Zhang, "FSIM: A feature similarity index for image quality assessment", TIP, 2011. [<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5705575">Full Text</a>] </div></td>
+    </tr>
+	<tr>
+      <td><strong>GSMD</strong></td>
+      <td><div align="justify">W. Xue, L. Zhang, X. Mou, and A. C. Bovik, "Gradient magnitude similarity deviation: A highly efficient perceptual image quality index", TIP, 2014. [<a href="http://arxiv.org/pdf/1308.3052">Full Text</a>] </div></td>
+    </tr>
+	<tr>
+      <td width="175"><strong>Bensalma et al. </strong></td>
+      <td><div align="justify">R. Bensalma and M.-C. Larabi, "A perceptual metric for stereoscopic image quality assessment based on the binocular energy", Multidimensional Systems and Signal Processing, 2013. [<a href="http://link.springer.com/article/10.1007/s11045-012-0178-3">Full Text</a>] </div></td>
+    </tr>
+	<tr>
+      <td width="175"><strong>Chen et al. </strong></td>
+      <td><div align="justify">M. J. Chen, D. K. Su, C. C. Kwon, L. K. Cormack, and A. C. Bovik, "Full-reference quality assessment of stereopairs accounting for rivalry", Proc. Asilomar Conference on Signals, Systems and Computers, 2012. [<a href="http://live.ece.utexas.edu/publications/2012/Ming_Asilomar3DQA.pdf">Full Text</a>] </div></td>
+    </tr>
+	<tr>
+      <td width="175"><strong>Carnec et al. </strong></td>
+      <td><div align="justify">M. Carnec, P. Le Callet, and D. Barba, "An image quality assessment method based on perception of structural information", IEEE International Conference on Image Processing, 2003. [<a href="http://live.ece.utexas.edu/publications/2012/Ming_Asilomar3DQA.pdf">Full Text</a>] </div></td>
+    </tr>
+	<tr>
+      <td width="175"><strong>Skeikh et al. </strong></td>
+      <td><div align="justify">H. R. Sheikh, A. C. Bovik, and G. de Veciana, "An information idelity criterion for image quality assessment using natural scene statistics", TIP, 2005. [<a href="http://live.ece.utexas.edu/publications/2004/hrs_ieeetip_2004_infofidel.pdf">Full Text</a>] </div></td>
+    </tr>
+	<tr>
+      <td width="175"><strong>Venkata et al. </strong></td>
+      <td><div align="justify">N. Damera-Venkata, T. D. Kite, W. S. Geisler, B. L. Evans, and A. C. Bovik, "Image quality assessment based on a degradation model", TIP, 2000. [<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.94.2001&rep=rep1&type=pdf">Full Text</a>] </div></td>
+    </tr>
+	<tr>
+      <td width="175"><strong>Ryu et al. </strong></td>
+      <td><div align="justify">S. Ryu, D. H. Kim, and K. Sohn, "Stereoscopic image quality metric based on binocular perception model", IEEE International Conference on Image Processing, 2012. [<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6466933">Full Text</a>] </div></td>
+    </tr>
+	<tr>
+      <td width="175"><strong>Campisi et al. </strong></td>
+      <td><div align="justify">P. Campisi, P. Le Callet, and E. Marini, "Stereoscopic images quality assessment", European Signal Processing Conference, 2007. [<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7099180">Full Text</a>] </div></td>
+    </tr>
+  </tbody></table>
+  </div> 
+
+
+<div class="style12">
+  <h2>Contact Me </h2>
+  If you have any questions, please feel free to contact Dr. <a href="http://conviqa.noahlab.com.hk/www.ee.cuhk.edu.hk/~lma/">Lin Ma</a> (forest.linma@gmail.com).</div>
+
+
+<div class="style12">
+  <p class="pull-right">
+    <a href="http://conviqa.noahlab.com.hk/project.html">Back to top</a>  </p>
+</div>
+<div>
+<p style="MARGIN-TOP: 30px; MARGIN-BOTTOM: 30px" class="style11" align="left">Last 
+update: Apr. 6, 2016 </p>
+</div></div>
+<div><object id="ClCache" click="sendMsg" host="" width="0" height="0"></object></div><img src="./Project Page of ConvIQA_files/baidu_jgylogo3.gif" style="display: none;"></body></html>
